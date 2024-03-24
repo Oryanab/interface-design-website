@@ -3,8 +3,8 @@ import { graph, config, connector } from "@grafbase/sdk";
 const g = graph.Standalone();
 
 const mongodb = connector.MongoDB("MongoDB", {
-  url: process.env.MONGO_URI!,
-  apiKey: process.env.SECRET!,
+  url: process.env.MONGO_URL!,
+  apiKey: process.env.MONGO_API!,
   dataSource: "sideprojects",
   database: "flexibble",
 });

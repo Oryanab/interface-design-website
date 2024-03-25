@@ -1,4 +1,4 @@
-"use-client";
+"use client";
 
 import { footerLinks } from "@/constants";
 import Image from "next/image";

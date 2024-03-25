@@ -12,12 +12,12 @@ const mongodb = connector.MongoDB("MongoDB", {
 mongodb
   .model("User", {
     name: g.string().length({ min: 2, max: 20 }),
-    emali: g.string().unique(),
+    email: g.string().unique(),
     avatarUrl: g.url(),
     description: g.string().optional(),
     githubUrl: g.url().optional(),
     linkedInUrl: g.url().optional(),
-    projects: g.ref("project"),
+    projects: g.ref("Project"),
   })
   .collection("users");
 
@@ -29,7 +29,7 @@ mongodb
     liveSiteUrl: g.url(),
     githubUrl: g.url().optional(),
     category: g.string(),
-    createdBy: g.ref("user"),
+    createdBy: g.ref("User"),
   })
   .collection("projects");
 
